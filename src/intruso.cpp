@@ -61,6 +61,5 @@ void Intruso::set_senha_vazada(string vazou){
 }
 
 string Intruso::crack_senha(){
-    cout<<"1";
     return _senha;
 }
