@@ -1,7 +1,7 @@
 #include "C:\Faculdade\PDS 2\VPL07\VPL07\include\intruso.hpp"
-#include <vector>
 #include <string>
 #include <iostream>
+#include <vector>
 using namespace std;
 
 void Intruso::set_senha_vazada(string vazou){
