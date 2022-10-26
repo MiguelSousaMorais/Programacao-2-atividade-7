@@ -7,11 +7,15 @@ int main(){
     Intruso intruso;
     
     std::cin >> num_entradas;
-
+    std::getline(std::cin, senha);
     for(i=0; i < num_entradas; i++){
-        std::cin.ignore();
+      // cout << "-1";
+       //std::cin.ignore();
+     //  cout<< "0";
         std::getline(std::cin, senha);
+      //  cout<< "1";
         intruso.set_senha_vazada(senha);
+       //cout << "2";
     }
     std::cout << intruso.crack_senha() <<std::endl;
     

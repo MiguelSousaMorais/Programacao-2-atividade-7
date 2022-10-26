@@ -5,6 +5,7 @@
 using namespace std;
 
 void Intruso::set_senha_vazada(string vazou){
+  //  cout << 5;
     int i=0;
     int j=0;
     string elementos;
@@ -43,7 +44,7 @@ void Intruso::set_senha_vazada(string vazou){
         }
 
         else{
-            for(int z=0; z<10 ; z+=2){            // compara os elementos dos vetores criados para         
+            for(int z=0; z<12 ; z+=2){            // compara os elementos dos vetores criados para         
                                                   // para descobir a senha certa 
                 for(i=z;i<z+2;i++){               // EX :: elemento aux = 39 08 24 17 24 39
                     for(j=z;j<z+2;j++){           //       elemento x = 98 05 34 72 82 79
@@ -57,9 +58,10 @@ void Intruso::set_senha_vazada(string vazou){
             }
         }
         aux++;
-
+//cout << elementos << endl << elementos_aux;
 }
 
 string Intruso::crack_senha(){
+   // cout << 4;
     return _senha;
 }
