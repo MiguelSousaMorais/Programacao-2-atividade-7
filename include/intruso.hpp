@@ -9,8 +9,9 @@ class Intruso{
     int num_entradas;
     string _senha;
     string elementos_aux;
+    string elementos_aux1;
 
     public:
-        void set_senha_vazada(std::string vazou);
+        void set_senha_vazada(std::string vazou,int num_entradas);
         std::string crack_senha();
 };

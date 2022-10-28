@@ -4,7 +4,7 @@
 #include <vector>
 using namespace std;
 
-void Intruso::set_senha_vazada(string vazou){
+void Intruso::set_senha_vazada(string vazou, int num_entradas){
   //  cout << 5;
     int i=0;
     int j=0;
@@ -42,21 +42,43 @@ void Intruso::set_senha_vazada(string vazou){
         if (aux==0){                              // Verifica se é a primeira execução da função set_senha_vazada
             elementos_aux = elementos;            // cria vetores para serem comparados para descobrir a senha
         }
-
-        else{
-            for(int z=0; z<12 ; z+=2){            // compara os elementos dos vetores criados para         
+        if(aux == 1){
+            elementos_aux1 = elementos;
+            if(num_entradas<3){
+                 for(int z=0; z<12 ; z+=2){            // compara os elementos dos vetores criados para         
                                                   // para descobir a senha certa 
                 for(i=z;i<z+2;i++){               // EX :: elemento aux = 39 08 24 17 24 39
                     for(j=z;j<z+2;j++){           //       elemento x = 98 05 34 72 82 79
-                        if(elementos[i]==elementos_aux[j]){        // senha = 9 0 4 7 2 9 
+                        for(int x=z;x<z+2;x++){
+                           if(elementos[i]==elementos_aux[j] && elementos_aux[j]==elementos_aux1[x]){      
                             _senha.push_back(elementos[i]);
                             _senha += " ";
+                        }
+                        }
+                    }
+                }
+            }
+            }
+        }
+        if(aux == 2){
+             for(int z=0; z<12 ; z+=2){            // compara os elementos dos vetores criados para         
+                                                  // para descobir a senha certa 
+                for(i=z;i<z+2;i++){               // EX :: elemento aux = 39 08 24 17 24 39
+                    for(j=z;j<z+2;j++){           //       elemento x = 98 05 34 72 82 79
+                        for(int x=z;x<z+2;x++){
+                           if(elementos[i]==elementos_aux[j] && elementos_aux[j]==elementos_aux1[x]){      
+                            _senha.push_back(elementos[i]);
+                            _senha += " ";
+                            }
                         }
                     }
 
                 }
             }
         }
+           
+        
+
         aux++;
 //cout << elementos << endl << elementos_aux;
 }
