@@ -1,9 +1,9 @@
-all: clean intruso.o
+all: clean intruso
 	g++ intruso.o src/main.cpp -o main
 	main
 	make clean
 
-intruso.o: include/intruso.hpp
+intruso: include/intruso.hpp
 	g++ -c src/intruso.cpp
 
 
