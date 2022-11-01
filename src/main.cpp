@@ -1,5 +1,5 @@
 #include <iostream>
-#include "C:\Faculdade\PDS 2\VPL07\VPL07\include\intruso.hpp"
+#include "instruso.hpp"
 
 int main(){
     int num_entradas, i;
