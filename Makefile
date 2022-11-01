@@ -1,5 +1,5 @@
 all: clean intruso.o
-	g++ intruso.o src/main.cpp -o main
+	g++ intruso.o src/main.cpp -o main.out
 	main
 	make clean
 
